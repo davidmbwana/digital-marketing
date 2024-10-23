@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Campaign Reach and Conversations</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #content {
+            display: none;
+        }
+        #password-form {
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="password"], input[type="submit"] {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "vfreport") {
+                document.getElementById("password-form").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+            return false; // prevent form submission
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Password form -->
+    <div id="password-form">
+        <h2>Enter Password to View the Report</h2>
+        <form onsubmit="return checkPassword();">
+            <input type="password" id="password" placeholder="Enter password" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Hidden content (table) -->
+    <div id="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Reach</th>
+                    <th>Conversations Started</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4632</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>7492</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>1425</td>
+                    <td>4039</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>3191</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>2828</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>6371</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Reach</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
