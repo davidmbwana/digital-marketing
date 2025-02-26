@@ -11,6 +11,23 @@
 
   gtag('config', 'AW-710576513');
 </script>
+	    <!-- Event snippet for Track Clicks conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-710576513/6W6OCMvXoaMaEIGT6tIC',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
         <meta charset="utf-8"/>
         <title>Ahadi Software Africa - Data Driven Digital Agency</title>
         <meta content="The #1 Lead Generation agency for startups, companies and entrepreneurs in Nairobi." name="description"/>
@@ -132,7 +149,7 @@ src="https://www.facebook.com/tr?id=1059747958672194&ev=PageView&noscript=1"
                     
 		    <div class="button__group">
                         <a href="https://wa.link/96y501" class="button hero w-inline-block">
-                            <div>WhatsApp Us</div>
+                            <div onclick="return gtag_report_conversion('https://ahadisoft.com');">WhatsApp Us</div>
                         </a>
                     </div>
                 </div>
@@ -307,7 +324,7 @@ src="https://www.facebook.com/tr?id=1059747958672194&ev=PageView&noscript=1"
                         </div>
                         <div class="button__group">
                             <a href="https://wa.link/96y501" target="_blank" class="button large w-inline-block">
-                                <div>Contact</div>
+                                <div onclick="return gtag_report_conversion('https://ahadisoft.com');">Contact</div>
                             </a>
                         </div>
                     </div>
@@ -432,12 +449,12 @@ src="https://www.facebook.com/tr?id=1059747958672194&ev=PageView&noscript=1"
                                 <div class="pricing__amount">KES 4,999/= </div>
                                 <div class="pricing__not-included m-t-0">4 hour session</div>
                                 <div class="button__group pricing">
-                                    <a data-ms-membership="62558f15e13be400045542ac" href="https://wa.link/96y501" class="button pricing w-inline-block">
-                                        <div>Book Consultation</div>
+                                    <a data-ms-membership="62558f15e13be400045542ac" href="https://wa.link/96y501" onclick="return gtag_report_conversion('https://ahadisoft.com');" class="button pricing w-inline-block">
+                                        <div >Book Consultation</div>
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="https://wa.link/96y501" target="_blank" class="book-call-wrapper _2">Book a call</a>
+                                    <a href="https://wa.link/96y501" target="_blank" class="book-call-wrapper _2" onclick="return gtag_report_conversion('https://ahadisoft.com');">Book a call</a>
                                 </div>
                             </div>
                             <div class="most-popular-tag">
@@ -479,13 +496,13 @@ src="https://www.facebook.com/tr?id=1059747958672194&ev=PageView&noscript=1"
                                 <div class="pricing__amount">Let's negotiate</div>
                                 <div class="pricing__not-included m-t-0">Digital Marketing Masterclass + Plan + Implementation Assistance</div>
                                 <div class="button__group pricing">
-                                    <a data-ms-membership="62678c0904c1df00043bf6ff" href="https://wa.link/96y501" class="button w-inline-block">
+                                    <a data-ms-membership="62678c0904c1df00043bf6ff" href="https://wa.link/96y501" onclick="return gtag_report_conversion('https://ahadisoft.com');" class="button w-inline-block">
                                         <div>Get started today</div>
                                     </a>
                                 </div>
                                 <div class="book-call-wrapper"></div>
                                 <div class="div-block-18">
-                                    <a href="https://wa.link/96y501" target="_blank" class="book-call-wrapper _2">Book a call</a>
+                                    <a href="https://wa.link/96y501" onclick="return gtag_report_conversion('https://ahadisoft.com');" target="_blank" class="book-call-wrapper _2">Book a call</a>
                                 </div>
                             </div>
                         </div>
@@ -521,13 +538,13 @@ src="https://www.facebook.com/tr?id=1059747958672194&ev=PageView&noscript=1"
                             <img src="https://assets-global.website-files.com/5837424ae11409586f837994/611abc6c32fdaa097c267b19_dFrame.svg" loading="lazy" alt="" class="pricing__right-col-img"/>
                             <div class="pricing__title small">Reach us via WhatsApp</div>
                             <div class="pricing__description">Learn more about how Ahadi Software Africa works and how we can help you.</div>
-                            <a href="https://wa.link/96y501" target="_blank" class="pricing__text-link">Book a call</a>
+                            <a href="https://wa.link/96y501" onclick="return gtag_report_conversion('https://ahadisoft.com');" target="_blank" class="pricing__text-link">Book a call</a>
                         </div>
                         <div class="pricing__right-col-top bottom">
                             <img src="https://assets-global.website-files.com/5837424ae11409586f837994/611abc6c5e7a2adf4b36ad2c_ddGroup.svg" loading="lazy" alt="" class="pricing__right-col-img"/>
                             <div class="pricing__title small">Refer a friend &amp;earn</div>
                             <div class="pricing__description">Earn 5% monthly recurring commissions for each referral.</div>
-                            <a href="https://wa.link/96y501" target="_blank" class="pricing__text-link">Contact Us</a>
+                            <a href="https://wa.link/96y501" onclick="return gtag_report_conversion('https://ahadisoft.com');" target="_blank" class="pricing__text-link">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -629,7 +646,7 @@ src="https://www.facebook.com/tr?id=1059747958672194&ev=PageView&noscript=1"
                 <div data-w-id="e21e1f8d-f728-e6e2-065d-4466a59029d4" class="container__800 m-auto hero">
                     <h2>See if Ahadi Software Africa is right for you. (It totally is.)</h2>
                     
-					<a href="https://wa.link/96y501" class="cta-button w-inline-block">
+					<a href="https://wa.link/96y501" onclick="return gtag_report_conversion('https://ahadisoft.com');" class="cta-button w-inline-block">
                         <div>Reach Us Via WhatsApp</div>
                     </a>
                 </div>
